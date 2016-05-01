@@ -13,7 +13,13 @@
 
 
 Route::group(['middleware' => ['web']], function () {
-Route::get('wiadomosci', 'PagesController@getWiadomosci');
+Route::auth();
+	
+Route::get('/home', 'HomeController@index');
+Route::get('/', function(){
+		return view('welcome');
+});
+/*Route::get('wiadomosci', 'PagesController@getWiadomosci');
 Route::get('oceny', 'PagesController@getOceny');
 Route::get('/', 'PagesController@getIndex');
 Route::resource('posts', 'PostController');
@@ -31,6 +37,10 @@ Route::get('subjects/create', 'SubjectController@create');
 Route::get('subjects/{id}', 'SubjectController@show');
 Route::get('subjects/{id}/edit', 'SubjectController@edit');
 Route::patch('subjects/{id}/edit', 'SubjectController@update');
-Route::delete('subjects/{id}/delete', 'SubjectController@destroy');
+Route::delete('subjects/{id}/delete', 'SubjectController@destroy');*/
 
 	});
+
+/*Route::auth();
+
+Route::get('/home', 'HomeController@index');*/
