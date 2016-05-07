@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateKlasaIBTable extends Migration
+class CreateClassIBTable extends Migration
 {
     /**
      * Run the migrations.
