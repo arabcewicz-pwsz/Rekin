@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 class PagesController extends Controller {
 
 	public function getIndex() {
-		return view('pages.welcome');
+		return view('welcome');
 
  	}
-	public function getOceny() {
+	/*public function getOceny() {
 		$first = 'Aneta';
 		$last = 'Hania';
 
@@ -16,7 +16,7 @@ class PagesController extends Controller {
 		$email = "glrosebd.gmail.com";
 		return view('pages.oceny')->withFullname($fullname)->withEmail($email);
 
-	}
+	}*/
 	public function getWiadomosci() {
 		return view('pages.wiadomosci');
 

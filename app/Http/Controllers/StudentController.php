@@ -56,14 +56,16 @@ public function update(Request $request, $id)
 	$student->miejscowosc = $request->miejscowosc;
 	$student->telefon = $request->telefon;
 	$student->save();
-	return 'Poprawnie dokonano aktualizacji';
+	//return 'Poprawnie dokonano aktualizacji';
+	return redirect('students');
 }
 
 public function destroy($id)
 {
 	$student = Student::findOrFail($id);
 	$student->delete();
-	return 'Student usuniÄ™ty';  
+	//return 'Student usuniêty'; 
+	return redirect('students');
 }
 
 }

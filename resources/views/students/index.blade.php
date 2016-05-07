@@ -1,6 +1,6 @@
 <!--/resources/views/students/index.blade.php -->
 
-@extends('main')
+@extends('layouts.app')
 
 @section('title', '| Uczniowie')
 

@@ -1,6 +1,6 @@
 <!-- resources/views/subjects/create.blade.php -->
 
-@extends('main')
+@extends('layouts.app')
 
 @section('title', '| Przedmiot')
 

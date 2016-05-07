@@ -47,14 +47,18 @@ public function update(Request $request, $id)
 	$subject = Subject::findOrFail($id);
 	$subject->przedmiot = $request->przedmiot;
 	$subject->save();
-	return 'Poprawnie dokonano aktualizacji';
+	//return 'Poprawnie dokonano aktualizacji';
+	return redirect('subjects');
+	
 }
 
 public function destroy($id)
 {
 	$subject = Subject::findOrFail($id);
 	$subject->delete();
-	return 'subject usuniÄ™ty';  
+	//return 'Usuniêto przedmiot';  
+	return redirect('subjects');
+	
 }
 
 }
