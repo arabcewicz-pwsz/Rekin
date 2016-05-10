@@ -6,12 +6,23 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CreateClassIATable' => $baseDir . '/database/migrations/2016_04_24_125016_create_ClassIA_table.php',
+    'CreateClassIBTable' => $baseDir . '/database/migrations/2016_04_24_125016_create_ClassIB_table.php',
+    'CreateClassICTable' => $baseDir . '/database/migrations/2016_04_24_125016_create_ClassIC_table.php',
+    'CreateClassIIATable' => $baseDir . '/database/migrations/2016_04_24_125016_create_ClassIIA_table.php',
+    'CreateClassIIBTable' => $baseDir . '/database/migrations/2016_04_24_125016_create_ClassIIB_table.php',
+    'CreateClassIICTable' => $baseDir . '/database/migrations/2016_04_24_125016_create_ClassIIC_table.php',
+    'CreateClassIIIATable' => $baseDir . '/database/migrations/2016_04_24_125016_create_ClassIIIA_table.php',
+    'CreateClassIIIBTable' => $baseDir . '/database/migrations/2016_04_24_125016_create_ClassIIIB_table.php',
+    'CreateClassIIICTable' => $baseDir . '/database/migrations/2016_04_24_125016_create_ClassIIIC_table.php',
+    'CreateGradesTable' => $baseDir . '/database/migrations/2016_04_24_125016_create_grades_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePostsTable' => $baseDir . '/database/migrations/2016_04_17_160323_create_posts_table.php',
     'CreateStudentsTable' => $baseDir . '/database/migrations/2016_04_24_125017_create_students_table.php',
     'CreateSubjectsTable' => $baseDir . '/database/migrations/2016_04_24_141924_create_subjects_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
+    'EntrustSetupTables' => $baseDir . '/database/migrations/2016_05_10_162629_entrust_setup_tables.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',
     'File_Iterator_Factory' => $vendorDir . '/phpunit/php-file-iterator/src/Factory.php',
@@ -517,4 +528,5 @@ return array(
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
+    'Zizaco\\Entrust\\MigrationCommand' => $vendorDir . '/zizaco/entrust/src/commands/MigrationCommand.php',
 );

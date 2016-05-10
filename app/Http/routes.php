@@ -1,5 +1,7 @@
 <?php
 
+use App\Role;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -17,6 +19,14 @@ Route::auth();
 	
 Route::get('/home', 'HomeController@index');
 Route::get('/', function(){
+	
+	if(Role::where( 'name', '=', 'teacher' )->count() < 1)
+	{
+		$teacher = new Role();
+		$teacher->name = 'teacher';
+		$teacher->save();
+	}
+	
 		return view('welcome');
 });
 Route::get('wiadomosci', [

@@ -7,6 +7,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use App\Role;
 
 class AuthController extends Controller
 {
@@ -63,10 +64,16 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $new_user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+        
+        $teacher = Role::where( 'name', '=', 'teacher' )->first();
+        
+        $new_user->attachRole( $teacher );
+        
+        return $new_user;
     }
 }
